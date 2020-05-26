@@ -4,8 +4,10 @@
 Here the visitor's device's operating system is used, whether said device is a mobile device, the visitor's country and the number of page views as the criteria for whether a transaction has been made.
 
 In this case, bqml_lab is the name of the dataset and sample_model is the name of the model. The model type specified is binary logistic regression. In this case, label is what you're trying to fit to.
-
 Note: If you're only interested in 1 column, this is an alternative way to setting input_label_cols.
+
+The training data is being limited to those collected from 1 August 2016 to 30 June 2017. This is done to save the last month of data for "prediction". 
+It is further limited to 100,000 data points to save some time.
 */
 CREATE OR REPLACE MODEL `bqml_lab.sample_model`
 OPTIONS(model_type='logistic_reg') AS
